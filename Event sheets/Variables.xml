@@ -2,5 +2,7 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Variables</name>
-    <events />
+    <events>
+        <variable constant="0" name="TravelSpeed" sid="201753260075206" static="0" type="number">0</variable>
+    </events>
 </c2eventsheet>

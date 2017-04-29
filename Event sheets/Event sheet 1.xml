@@ -8,7 +8,95 @@
             <conditions>
                 <condition id="-2" name="On start of layout" sid="580223639881429" type="System" />
             </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="177145550229572" type="System">
+                    <param id="0" name="Variable">TravelSpeed</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+                <action behavior="Physics" id="12" name="Set world gravity" sid="203632621464088" type="Player">
+                    <param id="0" name="Gravity">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="908829777644159">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="264036709826841" type="System" />
+            </conditions>
             <actions />
+            <sub-events>
+                <event-block sid="264587805971183">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="900374059377198" type="Player">
+                            <param id="0" name="Object">SpriteWalls</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="411638400770645" type="System">
+                            <param id="0" name="First value">Touch.X</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="4" name="Apply impulse towards position" sid="444771079721768" type="Player">
+                            <param id="0" name="Impulse">-TravelSpeed</param>
+                            <param id="1" name="X">Touch.X</param>
+                            <param id="2" name="Y">Touch.Y</param>
+                            <param id="3" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="481558826172078">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="658417950897495" type="Player">
+                    <param id="0" name="Object">SpriteWalls</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="5" name="Apply impulse at angle" sid="696898760364923" type="Player">
+                    <param id="0" name="Impulse">-TravelSpeed</param>
+                    <param id="1" name="Angle">-Player.Angle</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="472428386710200">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="349026912695684" type="Character1">
+                    <param id="0" name="Object">Character2</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="262656786980018">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="641617813586281" type="System">
+                            <param id="0" name="First value">Character1.Height*Character1.Width</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">Character2.Height*Character2.Width</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="221040638417178" type="Character1">
+                            <param id="0" name="Width">Character1.Width+Character2.Width</param>
+                            <param id="1" name="Height">Character1.Height+Character2.Height</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="618601435671098" type="Character2" />
+                    </actions>
+                </event-block>
+                <event-block sid="996052771985892">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="389420561226665" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="335184953642631" type="Character2">
+                            <param id="0" name="Width">Character1.Width+Character2.Width</param>
+                            <param id="1" name="Height">Character1.Height+Character2.Height</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="136231242753292" type="Character1" />
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>
