@@ -11,11 +11,14 @@
     <saved-with-version>24400</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="shadowcaster" version="1">Shadow Caster</behavior>
@@ -26,8 +29,8 @@
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
     <window-size>
-        <width>720</width>
-        <height>1280</height>
+        <width>2000</width>
+        <height>3000</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
@@ -51,6 +54,9 @@
         </object-type>
         <object-type name="Player" sid="316398050450543">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Area" sid="556110682504390" type="number" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="ScrollTo" sid="721959279270927">
                     <behavior id="scrollto" />
@@ -122,6 +128,27 @@
         <object-type name="Function" sid="374085350877251">
             <plugin id="Function" />
         </object-type>
+        <object-type name="Particles" sid="134820996853942">
+            <plugin id="Particles" />
+            <behaviors>
+                <behavior-type name="Pin" sid="337597344649903">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="TiledBackground" sid="420491380402536">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Tiago\Desktop\SPACEAPPS\assets\bg2.png" />
+        </object-type>
+        <object-type name="BG" sid="135272045631427">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="208619043231827" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Character1" plugin-id="Sprite" sid="434438036026054">
@@ -142,6 +169,33 @@
             <instance-variables>
                 <instance-variable name="Mass" sid="165913484265123" type="number" />
             </instance-variables>
+        </family>
+        <family name="Enemies" plugin-id="Sprite" sid="140817415989364">
+            <members>
+                <member>SpriteEnemy1</member>
+                <member>SpriteEnemy2</member>
+                <member>SpriteEnemy3</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="Size0" sid="311698548061723" type="number" />
+                <instance-variable name="Size1" sid="595225235206922" type="number" />
+                <instance-variable name="vx0" sid="346977565764627" type="number" />
+                <instance-variable name="vx1" sid="285342257976954" type="number" />
+                <instance-variable name="vy0" sid="109121018135334" type="number" />
+                <instance-variable name="vy1" sid="856589281789291" type="number" />
+                <instance-variable name="Mass0" sid="302286177021937" type="number" />
+                <instance-variable name="Mass1" sid="824053334236520" type="number" />
+                <instance-variable name="UID0" sid="406244734556432" type="number" />
+                <instance-variable name="UID1" sid="633904337661958" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="BoundToLayout" sid="102141534998795">
+                    <behavior id="bound" />
+                </behavior-type>
+                <behavior-type name="Physics" sid="255839008902483">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
         </family>
     </families>
     <layout-folder>

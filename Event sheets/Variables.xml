@@ -3,6 +3,18 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Variables</name>
     <events>
+        <variable constant="0" name="uid0" sid="158765443533674" static="0" type="number">0</variable>
+        <variable constant="0" name="mass0" sid="158691182161120" static="0" type="number">0</variable>
+        <variable constant="0" name="vy0" sid="258421509778712" static="0" type="number">0</variable>
+        <variable constant="0" name="vx0" sid="616781501554192" static="0" type="number">0</variable>
+        <variable constant="0" name="size0" sid="527611623194488" static="0" type="number">0</variable>
+        <variable constant="0" name="uid1" sid="746186565435912" static="0" type="number">0</variable>
+        <variable constant="0" name="mass1" sid="866738436919901" static="0" type="number">0</variable>
+        <variable constant="0" name="vy1" sid="543337553745819" static="0" type="number">0</variable>
+        <variable constant="0" name="vx1" sid="301634212437583" static="0" type="number">0</variable>
+        <variable constant="0" name="size1" sid="214311053230506" static="0" type="number">0</variable>
+        <variable constant="0" name="Impulse" sid="913093413408500" static="0" type="number">0</variable>
+        <variable constant="0" name="LoseAmount" sid="476910666019238" static="0" type="number">0</variable>
         <variable constant="0" name="TravelSpeed" sid="201753260075206" static="0" type="number">0</variable>
     </events>
 </c2eventsheet>

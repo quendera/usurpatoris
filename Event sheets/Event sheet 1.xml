@@ -9,20 +9,294 @@
                 <condition id="-2" name="On start of layout" sid="580223639881429" type="System" />
             </conditions>
             <actions>
+                <action id="-9" name="Destroy" sid="317640381701410" type="TiledBackground" />
+                <action id="-9" name="Destroy" sid="859626391117135" type="BG" />
+                <action id="-3" name="Create object" sid="286379452207138" type="System">
+                    <param id="0" name="Object to create">BG</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">0</param>
+                    <param id="3" name="Y">0</param>
+                </action>
+                <action id="-3" name="Create object" sid="550884453395859" type="System">
+                    <param id="0" name="Object to create">TiledBackground</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">0</param>
+                    <param id="3" name="Y">0</param>
+                </action>
                 <action id="-9" name="Set value" sid="177145550229572" type="System">
                     <param id="0" name="Variable">TravelSpeed</param>
-                    <param id="1" name="Value">3</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="467352754704572" type="System">
+                    <param id="0" name="Variable">LoseAmount</param>
+                    <param id="1" name="Value">0.01</param>
+                </action>
+                <action id="-9" name="Set value" sid="639611563901913" type="System">
+                    <param id="0" name="Variable">Impulse</param>
+                    <param id="1" name="Value">-TravelSpeed*(log10(Player.Physics.Mass))</param>
                 </action>
                 <action behavior="Physics" id="12" name="Set world gravity" sid="203632621464088" type="Player">
                     <param id="0" name="Gravity">0</param>
                 </action>
+                <action behavior="Physics" id="5" name="Apply impulse at angle" sid="904841616095520" type="Enemies">
+                    <param id="0" name="Impulse">Impulse</param>
+                    <param id="1" name="Angle">random(0,360)</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
             </actions>
         </event-block>
+        <event-block sid="736148918148163">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="636825960418618" type="Enemies">
+                    <param id="0" name="Object">Player</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="982256997951112">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="642265664657709" type="System">
+                            <param id="0" name="First value">Player.Physics.Mass</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">Enemies.Physics.Mass</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="602076776169394" type="Player">
+                            <param id="0" name="Width">sqrt((Player.Width^2)+(Enemies.Width^2))</param>
+                            <param id="1" name="Height">sqrt((Player.Width^2)+(Enemies.Width^2))</param>
+                        </action>
+                        <action behavior="Physics" id="15" name="Set velocity" sid="679545839680583" type="Player">
+                            <param id="0" name="X component">(Player.Physics.Mass*Player.Physics.VelocityX+Enemies.Physics.Mass*Enemies.Physics.VelocityX)/(Player.Physics.Mass+Enemies.Physics.Mass)</param>
+                            <param id="1" name="Y component">(Player.Physics.Mass*Player.Physics.VelocityY+Enemies.Physics.Mass*Enemies.Physics.VelocityY)/(Player.Physics.Mass+Enemies.Physics.Mass)</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="937244234055504" type="Enemies" />
+                    </actions>
+                </event-block>
+                <event-block sid="767198413568766">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="732646129229019" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="897420115706400" type="Enemies">
+                            <param id="0" name="Width">sqrt((Player.Width^2)+(Enemies.Width^2))</param>
+                            <param id="1" name="Height">sqrt((Player.Width^2)+(Enemies.Width^2))</param>
+                        </action>
+                        <action behavior="Physics" id="15" name="Set velocity" sid="315638986890441" type="Enemies">
+                            <param id="0" name="X component">(Player.Physics.Mass*Player.Physics.VelocityX+Enemies.Physics.Mass*Enemies.Physics.VelocityX)/(Player.Physics.Mass+Enemies.Physics.Mass)</param>
+                            <param id="1" name="Y component">(Player.Physics.Mass*Player.Physics.VelocityY+Enemies.Physics.Mass*Enemies.Physics.VelocityY)/(Player.Physics.Mass+Enemies.Physics.Mass)</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="342383612372392" type="Player" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-group description="" sid="966671341565212" title="Enemies">
+            <sub-events>
+                <event-block sid="924136541796706">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="493928769874275" type="Enemies">
+                            <param id="0" name="Object">Enemies</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="973651493379138">
+                            <conditions>
+                                <condition id="-13" name="Pick nth instance" sid="519853524260457" type="System">
+                                    <param id="0" name="Object">Enemies</param>
+                                    <param id="1" name="Instance">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="102983065829761" type="System">
+                                    <param id="0" name="Variable">mass0</param>
+                                    <param id="1" name="Value">Enemies.Physics.Mass</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="432375301679570" type="System">
+                                    <param id="0" name="Variable">size0</param>
+                                    <param id="1" name="Value">Enemies.Width</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="696078070922541" type="System">
+                                    <param id="0" name="Variable">vx0</param>
+                                    <param id="1" name="Value">Enemies.Physics.VelocityX</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="939947389491169" type="System">
+                                    <param id="0" name="Variable">vy0</param>
+                                    <param id="1" name="Value">Enemies.Physics.VelocityY</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="466419750068249" type="System">
+                                    <param id="0" name="Variable">uid0</param>
+                                    <param id="1" name="Value">Enemies.UID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="424704610487564">
+                            <conditions>
+                                <condition id="-13" name="Pick nth instance" sid="971713373696705" type="System">
+                                    <param id="0" name="Object">Enemies</param>
+                                    <param id="1" name="Instance">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="741558979607266" type="System">
+                                    <param id="0" name="Variable">mass1</param>
+                                    <param id="1" name="Value">Enemies.Physics.Mass</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="764537756761067" type="System">
+                                    <param id="0" name="Variable">size1</param>
+                                    <param id="1" name="Value">Enemies.Width</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="986432919706832" type="System">
+                                    <param id="0" name="Variable">vx1</param>
+                                    <param id="1" name="Value">Enemies.Physics.VelocityX</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="906886520462178" type="System">
+                                    <param id="0" name="Variable">vy1</param>
+                                    <param id="1" name="Value">Enemies.Physics.VelocityY</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="708552262055087" type="System">
+                                    <param id="0" name="Variable">uid1</param>
+                                    <param id="1" name="Value">Enemies.UID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="157524486284855">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="656605022726326" type="System">
+                                    <param id="0" name="First value">Enemies.Mass0</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">Enemies.Mass1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="2" name="Call expression" sid="412759847802660" type="Function">
+                                    <param id="0" name="Expression">Function.Call(&quot;Live&quot;,uid0)</param>
+                                </action>
+                                <action id="2" name="Call expression" sid="488515364081208" type="Function">
+                                    <param id="0" name="Expression">Function.Call(&quot;Die&quot;,uid1)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="464474616298647">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="990104749109743" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="2" name="Call expression" sid="737607213904116" type="Function">
+                                    <param id="0" name="Expression">Function.Call(&quot;Live&quot;,uid1)</param>
+                                </action>
+                                <action id="2" name="Call expression" sid="339743581741396" type="Function">
+                                    <param id="0" name="Expression">Function.Call(&quot;Die&quot;,uid0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="277730154230517">
+                    <conditions>
+                        <condition id="0" name="On function" sid="791387257462449" type="Function">
+                            <param id="0" name="Name">&quot;Live&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="125563224229082">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="922432327650244" type="Enemies">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-7" name="Set size" sid="959387564538498" type="Enemies">
+                                    <param id="0" name="Width">sqrt((size0^2)+(size1^2))</param>
+                                    <param id="1" name="Height">sqrt((size0^2)+(size1^2))</param>
+                                </action>
+                                <action behavior="Physics" id="15" name="Set velocity" sid="446220562857162" type="Enemies">
+                                    <param id="0" name="X component">(mass0*vx0+mass1*vx1)/(mass0+mass1)</param>
+                                    <param id="1" name="Y component">(mass0*vy0+mass1*vy1)/(mass0+mass1)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="259357197253332">
+                    <conditions>
+                        <condition id="0" name="On function" sid="483540245376972" type="Function">
+                            <param id="0" name="Name">&quot;Die&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="389348225545146">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="987208674525978" type="Enemies">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="831692855162893" type="Enemies" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-block sid="908829777644159">
             <conditions>
                 <condition id="-1" name="Every tick" sid="264036709826841" type="System" />
             </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="109187986429766" type="Player">
+                    <param id="0" name="Instance variable">Area</param>
+                    <param id="1" name="Value">Player.Width*Player.Height</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="252499250746430">
+            <conditions>
+                <condition id="14" name="On tap" sid="363775255819779" type="Touch" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="815729909475919" type="Function">
+                    <param id="0" name="Name">&quot;Move&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="244487416099581">
+            <conditions>
+                <condition id="2" name="Is in touch" sid="468106302044093" type="Touch" />
+            </conditions>
             <actions />
+            <sub-events>
+                <event-block sid="980267728398049">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="805408668489919" type="System">
+                            <param id="0" name="Interval (seconds)">0.2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="700044941575550" type="Function">
+                            <param id="0" name="Name">&quot;Move&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="917182811068195">
+            <conditions>
+                <condition id="0" name="On function" sid="525618974852438" type="Function">
+                    <param id="0" name="Name">&quot;Move&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-7" name="Set size" sid="170531684746962" type="Player">
+                    <param id="0" name="Width">Player.Width*(1-LoseAmount)</param>
+                    <param id="1" name="Height">Player.Height*(1-LoseAmount)</param>
+                </action>
+            </actions>
             <sub-events>
                 <event-block sid="264587805971183">
                     <conditions>
@@ -37,30 +311,35 @@
                     </conditions>
                     <actions>
                         <action behavior="Physics" id="4" name="Apply impulse towards position" sid="444771079721768" type="Player">
-                            <param id="0" name="Impulse">-TravelSpeed</param>
+                            <param id="0" name="Impulse">-TravelSpeed*(log10(Player.Physics.Mass))</param>
                             <param id="1" name="X">Touch.X</param>
                             <param id="2" name="Y">Touch.Y</param>
                             <param id="3" name="Image point">0</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="139320533414010" type="Player">
+                            <param id="0" name="Object">Particles</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="506621499669831" type="Particles">
+                            <param id="0" name="Pin to">Player</param>
+                            <param id="1" name="Mode">0</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="481558826172078">
+        <event-block disabled="1" sid="385633769901485">
             <conditions>
-                <condition id="0" name="On collision with another object" sid="658417950897495" type="Player">
-                    <param id="0" name="Object">SpriteWalls</param>
+                <condition id="-10" name="For" sid="328534983283321" type="System">
+                    <param id="0" name="Name">&quot;spawn&quot;</param>
+                    <param id="1" name="Start index">1</param>
+                    <param id="2" name="End index">20</param>
                 </condition>
             </conditions>
-            <actions>
-                <action behavior="Physics" id="5" name="Apply impulse at angle" sid="696898760364923" type="Player">
-                    <param id="0" name="Impulse">-TravelSpeed</param>
-                    <param id="1" name="Angle">-Player.Angle</param>
-                    <param id="2" name="Image point">0</param>
-                </action>
-            </actions>
+            <actions />
         </event-block>
-        <event-block sid="472428386710200">
+        <event-block disabled="1" sid="472428386710200">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="349026912695684" type="Character1">
                     <param id="0" name="Object">Character2</param>
@@ -68,7 +347,7 @@
             </conditions>
             <actions />
             <sub-events>
-                <event-block sid="262656786980018">
+                <event-block disabled="1" sid="262656786980018">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="641617813586281" type="System">
                             <param id="0" name="First value">Character1.Height*Character1.Width</param>
@@ -84,7 +363,7 @@
                         <action id="-9" name="Destroy" sid="618601435671098" type="Character2" />
                     </actions>
                 </event-block>
-                <event-block sid="996052771985892">
+                <event-block disabled="1" sid="996052771985892">
                     <conditions>
                         <condition id="-22" name="Else" sid="389420561226665" type="System" />
                     </conditions>
