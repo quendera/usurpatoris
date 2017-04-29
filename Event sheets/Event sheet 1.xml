@@ -11,6 +11,7 @@
             <actions>
                 <action id="-9" name="Destroy" sid="317640381701410" type="TiledBackground" />
                 <action id="-9" name="Destroy" sid="859626391117135" type="BG" />
+                <action id="-9" name="Destroy" sid="112792799334627" type="SpriteEnemy1" />
                 <action id="-3" name="Create object" sid="286379452207138" type="System">
                     <param id="0" name="Object to create">BG</param>
                     <param id="1" name="Layer">0</param>
@@ -25,7 +26,7 @@
                 </action>
                 <action id="-9" name="Set value" sid="177145550229572" type="System">
                     <param id="0" name="Variable">TravelSpeed</param>
-                    <param id="1" name="Value">1</param>
+                    <param id="1" name="Value">3</param>
                 </action>
                 <action id="-9" name="Set value" sid="467352754704572" type="System">
                     <param id="0" name="Variable">LoseAmount</param>
@@ -38,12 +39,78 @@
                 <action behavior="Physics" id="12" name="Set world gravity" sid="203632621464088" type="Player">
                     <param id="0" name="Gravity">0</param>
                 </action>
-                <action behavior="Physics" id="5" name="Apply impulse at angle" sid="904841616095520" type="Enemies">
-                    <param id="0" name="Impulse">Impulse</param>
-                    <param id="1" name="Angle">random(0,360)</param>
-                    <param id="2" name="Image point">0</param>
+                <action id="-9" name="Set value" sid="673965718730414" type="System">
+                    <param id="0" name="Variable">nrenemies</param>
+                    <param id="1" name="Value">100</param>
+                </action>
+                <action id="-9" name="Set value" sid="521446492105626" type="System">
+                    <param id="0" name="Variable">enemyimpulse</param>
+                    <param id="1" name="Value">5</param>
                 </action>
             </actions>
+            <sub-events>
+                <event-block sid="385633769901485">
+                    <conditions>
+                        <condition id="-23" name="While" sid="328534983283321" type="System" />
+                        <condition id="-8" name="Compare two values" sid="357268934784136" type="System">
+                            <param id="0" name="First value">SpriteEnemy1.Count</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">nrenemies</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Call expression" sid="919133355469247" type="Function">
+                            <param id="0" name="Expression">Function.Call(&quot;spawn&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="265959242246521">
+            <conditions>
+                <condition id="0" name="On function" sid="369481598825363" type="Function">
+                    <param id="0" name="Name">&quot;spawn&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="623860837531001" type="System">
+                    <param id="0" name="Object to create">SpriteEnemy1</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">random(50,LayoutWidth)</param>
+                    <param id="3" name="Y">random(50,LayoutHeight)</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="618099551347174">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="843907082320046" type="SpriteEnemy1">
+                            <param id="0" name="Object">SpriteEnemy1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="659340269183812" type="SpriteEnemy1" />
+                        <action id="2" name="Call expression" sid="692053234335243" type="Function">
+                            <param id="0" name="Expression">Function.Call(&quot;spawn&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="351471395430484">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="843993034198994" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="5" name="Apply impulse at angle" sid="836356710891220" type="SpriteEnemy1">
+                            <param id="0" name="Impulse">enemyimpulse</param>
+                            <param id="1" name="Angle">random(0,360)</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="749935952712759" type="SpriteEnemy1">
+                            <param id="0" name="Width">Player.Width-20</param>
+                            <param id="1" name="Height">Player.Height-20</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="736148918148163">
             <conditions>
@@ -71,6 +138,14 @@
                             <param id="1" name="Y component">(Player.Physics.Mass*Player.Physics.VelocityY+Enemies.Physics.Mass*Enemies.Physics.VelocityY)/(Player.Physics.Mass+Enemies.Physics.Mass)</param>
                         </action>
                         <action id="-9" name="Destroy" sid="937244234055504" type="Enemies" />
+                        <action id="-9" name="Set value" sid="534417764484603" type="System">
+                            <param id="0" name="Variable">windowh</param>
+                            <param id="1" name="Value">WindowHeight</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="289841758488225" type="System">
+                            <param id="0" name="Variable">windoww</param>
+                            <param id="1" name="Value">WindowWidth</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="767198413568766">
@@ -87,6 +162,14 @@
                             <param id="1" name="Y component">(Player.Physics.Mass*Player.Physics.VelocityY+Enemies.Physics.Mass*Enemies.Physics.VelocityY)/(Player.Physics.Mass+Enemies.Physics.Mass)</param>
                         </action>
                         <action id="-9" name="Destroy" sid="342383612372392" type="Player" />
+                        <action id="-9" name="Set value" sid="544893790959726" type="System">
+                            <param id="0" name="Variable">windowh</param>
+                            <param id="1" name="Value">WindowHeight</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="883189368611983" type="System">
+                            <param id="0" name="Variable">windoww</param>
+                            <param id="1" name="Value">WindowWidth</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -242,17 +325,6 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="908829777644159">
-            <conditions>
-                <condition id="-1" name="Every tick" sid="264036709826841" type="System" />
-            </conditions>
-            <actions>
-                <action id="-10" name="Set value" sid="109187986429766" type="Player">
-                    <param id="0" name="Instance variable">Area</param>
-                    <param id="1" name="Value">Player.Width*Player.Height</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="252499250746430">
             <conditions>
                 <condition id="14" name="On tap" sid="363775255819779" type="Touch" />
@@ -329,53 +401,24 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block disabled="1" sid="385633769901485">
+        <event-block sid="126810376066869">
             <conditions>
-                <condition id="-10" name="For" sid="328534983283321" type="System">
-                    <param id="0" name="Name">&quot;spawn&quot;</param>
-                    <param id="1" name="Start index">1</param>
-                    <param id="2" name="End index">20</param>
-                </condition>
+                <condition id="-1" name="Every tick" sid="455082158700229" type="System" />
             </conditions>
-            <actions />
+            <actions>
+                <action id="-28" name="Set canvas size" sid="640510454087025" type="System">
+                    <param id="0" name="Width">lerp(WindowWidth,Player.Width*8,0.001)</param>
+                    <param id="1" name="Height">lerp(WindowHeight,Player.Width*12.8,0.001)</param>
+                </action>
+            </actions>
         </event-block>
-        <event-block disabled="1" sid="472428386710200">
+        <event-block sid="300174049235746">
             <conditions>
-                <condition id="0" name="On collision with another object" sid="349026912695684" type="Character1">
-                    <param id="0" name="Object">Character2</param>
+                <condition id="-6" name="Every X seconds" sid="553883429218509" type="System">
+                    <param id="0" name="Interval (seconds)">0.001</param>
                 </condition>
             </conditions>
             <actions />
-            <sub-events>
-                <event-block disabled="1" sid="262656786980018">
-                    <conditions>
-                        <condition id="-8" name="Compare two values" sid="641617813586281" type="System">
-                            <param id="0" name="First value">Character1.Height*Character1.Width</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Second value">Character2.Height*Character2.Width</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-7" name="Set size" sid="221040638417178" type="Character1">
-                            <param id="0" name="Width">Character1.Width+Character2.Width</param>
-                            <param id="1" name="Height">Character1.Height+Character2.Height</param>
-                        </action>
-                        <action id="-9" name="Destroy" sid="618601435671098" type="Character2" />
-                    </actions>
-                </event-block>
-                <event-block disabled="1" sid="996052771985892">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="389420561226665" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-7" name="Set size" sid="335184953642631" type="Character2">
-                            <param id="0" name="Width">Character1.Width+Character2.Width</param>
-                            <param id="1" name="Height">Character1.Height+Character2.Height</param>
-                        </action>
-                        <action id="-9" name="Destroy" sid="136231242753292" type="Character1" />
-                    </actions>
-                </event-block>
-            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2project>
-    <name>New project</name>
+    <name>usurpatoris</name>
     <description></description>
     <version>1.0.0.0</version>
     <author></author>
@@ -10,21 +10,27 @@
     <unique-id>2m2oqhlgof90t</unique-id>
     <saved-with-version>24400</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
+        <behavior author="lunarray" id="lunarray_LiteTween" version="1.100000024">LiteTween</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects />
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
     <window-size>
-        <width>720</width>
-        <height>1280</height>
+        <width>5000</width>
+        <height>4000</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
@@ -48,6 +54,9 @@
         </object-type>
         <object-type name="Player" sid="316398050450543">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Area" sid="556110682504390" type="number" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="ScrollTo" sid="721959279270927">
                     <behavior id="scrollto" />
@@ -55,8 +64,11 @@
                 <behavior-type name="BoundToLayout" sid="579679546143553">
                     <behavior id="bound" />
                 </behavior-type>
-                <behavior-type name="8Direction" sid="779341772325215">
-                    <behavior id="EightDir" />
+                <behavior-type name="Physics" sid="312867302206039">
+                    <behavior id="Physics" />
+                </behavior-type>
+                <behavior-type name="LiteTween" sid="713108298051171">
+                    <behavior id="lunarray_LiteTween" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
@@ -65,12 +77,135 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="SpriteEnemy1" sid="991066787473106">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="494200901719347" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SpriteEnemy2" sid="638984433070930">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="523168555939355" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SpriteEnemy3" sid="298642833726652">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="310296557787336" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SpriteArea" sid="310173700399752">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="737537208730540" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SpriteWalls" sid="219285352532200">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="626954532403660">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="Physics" sid="159982582247726">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="340898451498124" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Function" sid="374085350877251">
+            <plugin id="Function" />
+        </object-type>
+        <object-type name="Particles" sid="134820996853942">
+            <plugin id="Particles" />
+            <behaviors>
+                <behavior-type name="Pin" sid="337597344649903">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="TiledBackground" sid="420491380402536">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Tiago\Desktop\SPACEAPPS\assets\bg2.png" />
+        </object-type>
+        <object-type name="BG" sid="135272045631427">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="208619043231827" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="906341581111288">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="832560987868217" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Tiago\Desktop\SPACEAPPS\assets\homescreen-MENU.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
-    <families />
+    <families>
+        <family name="Enemies" plugin-id="Sprite" sid="140817415989364">
+            <members>
+                <member>SpriteEnemy1</member>
+                <member>SpriteEnemy2</member>
+                <member>SpriteEnemy3</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="Size0" sid="311698548061723" type="number" />
+                <instance-variable name="Size1" sid="595225235206922" type="number" />
+                <instance-variable name="vx0" sid="346977565764627" type="number" />
+                <instance-variable name="vx1" sid="285342257976954" type="number" />
+                <instance-variable name="vy0" sid="109121018135334" type="number" />
+                <instance-variable name="vy1" sid="856589281789291" type="number" />
+                <instance-variable name="Mass0" sid="302286177021937" type="number" />
+                <instance-variable name="Mass1" sid="824053334236520" type="number" />
+                <instance-variable name="UID0" sid="406244734556432" type="number" />
+                <instance-variable name="UID1" sid="633904337661958" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="BoundToLayout" sid="102141534998795">
+                    <behavior id="bound" />
+                </behavior-type>
+                <behavior-type name="Physics" sid="255839008902483">
+                    <behavior id="Physics" />
+                </behavior-type>
+                <behavior-type name="LiteTween" sid="169998542875801">
+                    <behavior id="lunarray_LiteTween" />
+                </behavior-type>
+            </behaviors>
+        </family>
+    </families>
     <layout-folder>
+        <layout-folder name="Menu">
+            <layout>MMain.xml</layout>
+            <layout>MAbout.xml</layout>
+            <layout>MContribute.xml</layout>
+            <layout>MCompendium.xml</layout>
+        </layout-folder>
         <layout>Layout 1.xml</layout>
     </layout-folder>
     <event-folder>
+        <event-folder name="Menu">
+            <event-sheet>ESMMain.xml</event-sheet>
+            <event-sheet>ESMAbout.xml</event-sheet>
+            <event-sheet>ESMContribute.xml</event-sheet>
+            <event-sheet>ESMCompendium.xml</event-sheet>
+        </event-folder>
         <event-sheet>Event sheet 1.xml</event-sheet>
         <event-sheet>Variables.xml</event-sheet>
     </event-folder>
@@ -80,6 +215,7 @@
                 <use-mouse-input>Yes</use-mouse-input>
             </properties>
         </global-instance>
+        <global-instance type="Function" uid="9" />
     </global-instances>
     <sounds-folder />
     <music-folder />
