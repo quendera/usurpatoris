@@ -27,7 +27,7 @@
                 </action>
                 <action id="-9" name="Set value" sid="177145550229572" type="System">
                     <param id="0" name="Variable">TravelSpeed</param>
-                    <param id="1" name="Value">0.03</param>
+                    <param id="1" name="Value">0.02</param>
                 </action>
                 <action id="-9" name="Set value" sid="161800220158318" type="System">
                     <param id="0" name="Variable">enemytravlespeed</param>
@@ -43,6 +43,10 @@
                 </action>
                 <action behavior="Physics" id="12" name="Set world gravity" sid="203632621464088" type="Player">
                     <param id="0" name="Gravity">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="730918259137103" type="System">
+                    <param id="0" name="Variable">enemysize</param>
+                    <param id="1" name="Value">200</param>
                 </action>
                 <action id="-9" name="Set value" sid="673965718730414" type="System">
                     <param id="0" name="Variable">nrenemies</param>
@@ -225,19 +229,21 @@
                             <param id="0" name="X component">(Player.Physics.Mass*Player.Physics.VelocityX+Enemies.Physics.Mass*Enemies.Physics.VelocityX)/(Player.Physics.Mass+Enemies.Physics.Mass)</param>
                             <param id="1" name="Y component">(Player.Physics.Mass*Player.Physics.VelocityY+Enemies.Physics.Mass*Enemies.Physics.VelocityY)/(Player.Physics.Mass+Enemies.Physics.Mass)</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="342383612372392" type="Player" />
                         <action id="-9" name="Set value" sid="417384026668300" type="System">
                             <param id="0" name="Variable">Killer</param>
                             <param id="1" name="Value">Enemies.AnimationName</param>
                         </action>
-                        <action id="5" name="Check item exists" sid="269182505143936" type="LocalStorage">
+                        <action id="2" name="Call expression" sid="965561232612260" type="Function">
+                            <param id="0" name="Expression">Function.Call(&quot;GameOver&quot;)</param>
+                        </action>
+                        <action disabled="1" id="5" name="Check item exists" sid="269182505143936" type="LocalStorage">
                             <param id="0" name="Key">Killer</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="364006658105477">
+        <event-block disabled="1" sid="364006658105477">
             <conditions>
                 <condition id="9" name="On item exists" sid="334643777981602" type="LocalStorage">
                     <param id="0" name="Key">Killer</param>
@@ -258,32 +264,65 @@
                     <param id="0" name="Animation">Killer</param>
                     <param id="1" name="From">1</param>
                 </action>
+                <action id="-9" name="Destroy" sid="342383612372392" type="Player" />
             </actions>
         </event-block>
-        <event-block sid="780199568733037">
+        <event-block disabled="1" sid="780199568733037">
             <conditions>
                 <condition id="10" name="On item missing" sid="440911541638046" type="LocalStorage">
                     <param id="0" name="Key">Killer</param>
                 </condition>
             </conditions>
             <actions>
+                <action id="0" name="Set item" sid="745512724785654" type="LocalStorage">
+                    <param id="0" name="Key">Killer</param>
+                    <param id="1" name="Value">Killer</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="496084921462862">
+            <conditions>
+                <condition id="0" name="On function" sid="474582029438734" type="Function">
+                    <param id="0" name="Name">&quot;GameOver&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
                 <action id="-3" name="Create object" sid="782855299979926" type="System">
-                    <param id="0" name="Object to create">SpriteEnemy1</param>
+                    <param id="0" name="Object to create">SpriteEnemy2</param>
+                    <param id="1" name="Layer">3</param>
+                    <param id="2" name="X">Player.X</param>
+                    <param id="3" name="Y">Player.Y-150</param>
+                </action>
+                <action id="-7" name="Set size" sid="422445678865052" type="SpriteEnemy2">
+                    <param id="0" name="Width">300</param>
+                    <param id="1" name="Height">300</param>
+                </action>
+                <action id="4" name="Set animation" sid="921304534715332" type="SpriteEnemy2">
+                    <param id="0" name="Animation">Killer</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="291108823457070" type="Player" />
+                <action id="-3" name="Create object" sid="499351286059443" type="System">
+                    <param id="0" name="Object to create">SpriteLose</param>
                     <param id="1" name="Layer">3</param>
                     <param id="2" name="X">Player.X</param>
                     <param id="3" name="Y">Player.Y</param>
                 </action>
-                <action id="-7" name="Set size" sid="422445678865052" type="SpriteEnemy1">
-                    <param id="0" name="Width">300</param>
-                    <param id="1" name="Height">300</param>
+                <action id="-28" name="Set canvas size" sid="299474240467962" type="System">
+                    <param id="0" name="Width">800</param>
+                    <param id="1" name="Height">1280</param>
                 </action>
-                <action id="4" name="Set animation" sid="921304534715332" type="SpriteEnemy1">
-                    <param id="0" name="Animation">Killer</param>
-                    <param id="1" name="From">1</param>
-                </action>
-                <action id="0" name="Set item" sid="745512724785654" type="LocalStorage">
-                    <param id="0" name="Key">Killer</param>
-                    <param id="1" name="Value">Killer</param>
+            </actions>
+        </event-block>
+        <event-block sid="205917616032358">
+            <conditions>
+                <condition id="17" name="On tap object" sid="997322268410000" type="Touch">
+                    <param id="0" name="Object">SpriteLose</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="748955414746953" type="System">
+                    <param id="0" name="Layout">MMain</param>
                 </action>
             </actions>
         </event-block>
@@ -296,9 +335,6 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-16" name="Wait" sid="948086945986749" type="System">
-                    <param id="0" name="Seconds">5</param>
-                </action>
                 <action id="-2" name="Go to layout" sid="565607108116401" type="System">
                     <param id="0" name="Layout">MMain</param>
                 </action>
@@ -577,7 +613,7 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="126810376066869">
+        <event-block disabled="1" sid="126810376066869">
             <conditions>
                 <condition id="-1" name="Every tick" sid="455082158700229" type="System" />
             </conditions>
