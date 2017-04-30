@@ -29,11 +29,12 @@
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
     <window-size>
-        <width>5000</width>
-        <height>4000</height>
+        <width>800</width>
+        <height>1280</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
+    <first-layout>MMain</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -73,7 +74,7 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="867043170234115" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tiago\Desktop\SPACEAPPS\assets\mask.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -81,7 +82,18 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="494200901719347" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tiago\Desktop\SPACEAPPS\assets\mask.png">
+                        <collision-poly>
+                            <point x="0.146667" y="0.146667" />
+                            <point x="0.5" y="0" />
+                            <point x="0.853333" y="0.146667" />
+                            <point x="1" y="0.5" />
+                            <point x="0.853333" y="0.853333" />
+                            <point x="0.5" y="1" />
+                            <point x="0.146667" y="0.853333" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -149,11 +161,27 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite" sid="906341581111288">
+        <object-type name="SpriteMenu" sid="906341581111288">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="832560987868217" speed="5">
-                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Tiago\Desktop\SPACEAPPS\assets\homescreen-MENU.png" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Tiago\Desktop\SPACEAPPS\assets\homescreen-MENU2.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SpriteAnimal" sid="762493691029287">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="343747178385802" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tiago\Desktop\SPACEAPPS\assets\crawfish1.jpeg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SpritePlay" sid="668814539850283">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="716480469368311" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>

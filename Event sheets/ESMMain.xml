@@ -2,5 +2,18 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>ESMMain</name>
-    <events />
+    <events>
+        <event-block sid="882115708791377">
+            <conditions>
+                <condition id="17" name="On tap object" sid="267041080775817" type="Touch">
+                    <param id="0" name="Object">SpritePlay</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="903023660956742" type="System">
+                    <param id="0" name="Layout">Layout 1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
 </c2eventsheet>
