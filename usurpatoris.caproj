@@ -206,7 +206,7 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="832560987868217" speed="5">
-                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Tiago\Desktop\SPACEAPPS\assets\homescreen-MENU2.png" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Tiago\Desktop\SPACEAPPS\assets\ALL\NSA2017\UI\homescreenfinal-MENU.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -323,27 +323,57 @@
         <object-type name="SpriteCard" sid="459587810757373">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="370760809808503" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                <animation framecount="1" loop="0" name="A1" pingpong="0" repeatcount="1" repeatto="0" sid="256194649940679" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+                <animation framecount="1" loop="0" name="A2" pingpong="0" repeatcount="1" repeatto="0" sid="519514285275641" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+                <animation framecount="1" loop="0" name="A3" pingpong="0" repeatcount="1" repeatto="0" sid="807244454929271" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+                <animation framecount="1" loop="0" name="A4" pingpong="0" repeatcount="1" repeatto="0" sid="553915037821956" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+                <animation framecount="1" loop="0" name="A5" pingpong="0" repeatcount="1" repeatto="0" sid="881730469822682" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+                <animation framecount="1" loop="0" name="A6" pingpong="0" repeatcount="1" repeatto="0" sid="224717233155799" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+                <animation framecount="1" loop="0" name="A7" pingpong="0" repeatcount="1" repeatto="0" sid="119671389725491" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+                <animation framecount="1" loop="0" name="A8" pingpong="0" repeatcount="1" repeatto="0" sid="195734399242237" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+                <animation framecount="1" loop="0" name="A9" pingpong="0" repeatcount="1" repeatto="0" sid="428889497286702" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+                <animation framecount="1" loop="0" name="A10" pingpong="0" repeatcount="1" repeatto="0" sid="546310465757699" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+                <animation framecount="1" loop="0" name="A11" pingpong="0" repeatcount="1" repeatto="0" sid="233237550469313" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+                <animation framecount="1" loop="0" name="A12" pingpong="0" repeatcount="1" repeatto="0" sid="763660214073421" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+                <animation framecount="1" loop="0" name="A13" pingpong="0" repeatcount="1" repeatto="0" sid="121915640780697" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
                 </animation>
             </animation-folder>
         </object-type>
         <object-type name="SpriteEnemy2" sid="625728025942947">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="1" loop="0" name="A1" pingpong="0" repeatcount="1" repeatto="0" sid="828666010172246" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tiago\Desktop\SPACEAPPS\assets\Coins\invaders-large_0000s_0001_crawfish1.png" />
-                </animation>
-                <animation framecount="1" loop="0" name="A2" pingpong="0" repeatcount="1" repeatto="0" sid="270837147705026" speed="5">
+                <animation framecount="1" loop="0" name="A1" pingpong="0" repeatcount="1" repeatto="0" sid="899377046792724" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
-                <animation framecount="1" loop="0" name="A3" pingpong="0" repeatcount="1" repeatto="0" sid="420016576243956" speed="5">
+                <animation framecount="1" loop="0" name="A2" pingpong="0" repeatcount="1" repeatto="0" sid="669953149948582" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
-                <animation framecount="1" loop="0" name="A4" pingpong="0" repeatcount="1" repeatto="0" sid="428836673750671" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-                <animation framecount="1" loop="0" name="A5" pingpong="0" repeatcount="1" repeatto="0" sid="450639517039648" speed="5">
+                <animation framecount="1" loop="0" name="A3" pingpong="0" repeatcount="1" repeatto="0" sid="450639517039648" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tiago\Desktop\SPACEAPPS\assets\Coins\invaders-large_0000s_0012_Siluro3.png">
                         <collision-poly>
                             <point x="0.146" y="0.146" />
@@ -357,20 +387,94 @@
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="1" loop="0" name="A6" pingpong="0" repeatcount="1" repeatto="0" sid="707005197333166" speed="5">
+                <animation framecount="1" loop="0" name="A4" pingpong="0" repeatcount="1" repeatto="0" sid="270837147705026" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
-                <animation framecount="1" loop="0" name="A7" pingpong="0" repeatcount="1" repeatto="0" sid="899377046792724" speed="5">
+                <animation framecount="1" loop="0" name="A5" pingpong="0" repeatcount="1" repeatto="0" sid="428836673750671" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
-                <animation framecount="1" loop="0" name="A8" pingpong="0" repeatcount="1" repeatto="0" sid="394456043548497" speed="5">
+                <animation framecount="1" loop="0" name="A6" pingpong="0" repeatcount="1" repeatto="0" sid="420016576243956" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
-                <animation framecount="1" loop="0" name="A9" pingpong="0" repeatcount="1" repeatto="0" sid="669953149948582" speed="5">
+                <animation framecount="1" loop="0" name="A7" pingpong="0" repeatcount="1" repeatto="0" sid="828666010172246" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tiago\Desktop\SPACEAPPS\assets\Coins\invaders-large_0000s_0001_crawfish1.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="A8" pingpong="0" repeatcount="1" repeatto="0" sid="707005197333166" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
-                <animation framecount="1" loop="0" name="A10" pingpong="0" repeatcount="1" repeatto="0" sid="510364737344073" speed="5">
+                <animation framecount="1" loop="0" name="A9" pingpong="0" repeatcount="1" repeatto="0" sid="510364737344073" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="A10" pingpong="0" repeatcount="1" repeatto="0" sid="394456043548497" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SpriteGoRead" sid="266499863944669">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="156770212844557" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SpriteGoClose" sid="386062753892284">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="777047025649690" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="541675894204569">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="112811426827466" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SpriteCard2" sid="734007264963447">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="A1" pingpong="0" repeatcount="1" repeatto="0" sid="731066128493174" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Tiago\Desktop\SPACEAPPS\assets\ALL\NSA2017\FINALFINALCARDS\FINALFINALCARDS\moremoreinfoFINAL2-02.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="A2" pingpong="0" repeatcount="1" repeatto="0" sid="828736455577938" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+                <animation framecount="1" loop="0" name="A3" pingpong="0" repeatcount="1" repeatto="0" sid="759168007112093" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+                <animation framecount="1" loop="0" name="A4" pingpong="0" repeatcount="1" repeatto="0" sid="529153601440910" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+                <animation framecount="1" loop="0" name="A5" pingpong="0" repeatcount="1" repeatto="0" sid="741689828851551" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+                <animation framecount="1" loop="0" name="A6" pingpong="0" repeatcount="1" repeatto="0" sid="829072165693148" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+                <animation framecount="1" loop="0" name="A7" pingpong="0" repeatcount="1" repeatto="0" sid="589524071276715" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+                <animation framecount="1" loop="0" name="A8" pingpong="0" repeatcount="1" repeatto="0" sid="315601837321800" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+                <animation framecount="1" loop="0" name="A9" pingpong="0" repeatcount="1" repeatto="0" sid="791459960385079" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+                <animation framecount="1" loop="0" name="A10" pingpong="0" repeatcount="1" repeatto="0" sid="883442737623721" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+                <animation framecount="1" loop="0" name="A11" pingpong="0" repeatcount="1" repeatto="0" sid="858364154736858" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+                <animation framecount="1" loop="0" name="A12" pingpong="0" repeatcount="1" repeatto="0" sid="242259209572312" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+                <animation framecount="1" loop="0" name="A13" pingpong="0" repeatcount="1" repeatto="0" sid="526501231651629" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
                 </animation>
             </animation-folder>
         </object-type>

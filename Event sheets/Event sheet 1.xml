@@ -103,9 +103,17 @@
                     <param id="0" name="Variable">randX</param>
                     <param id="1" name="Value">75*(-ln(random(0,0.95)))+60</param>
                 </action>
+                <action id="-9" name="Set value" sid="978662949665441" type="System">
+                    <param id="0" name="Variable">randY</param>
+                    <param id="1" name="Value">floor((10/3)*-ln(random(0,0.95)))</param>
+                </action>
                 <action id="-7" name="Set size" sid="176284539547007" type="SpriteEnemy1">
                     <param id="0" name="Width">randX</param>
                     <param id="1" name="Height">randX</param>
+                </action>
+                <action id="4" name="Set animation" sid="968517172706978" type="SpriteEnemy1">
+                    <param id="0" name="Animation">&quot;A&quot;&amp;randY</param>
+                    <param id="1" name="From">1</param>
                 </action>
             </actions>
             <sub-events>
@@ -287,7 +295,14 @@
                     <param id="2" name="Second value">enemysize</param>
                 </condition>
             </conditions>
-            <actions />
+            <actions>
+                <action id="-16" name="Wait" sid="948086945986749" type="System">
+                    <param id="0" name="Seconds">5</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="565607108116401" type="System">
+                    <param id="0" name="Layout">MMain</param>
+                </action>
+            </actions>
         </event-block>
         <event-group description="" sid="966671341565212" title="Enemies">
             <sub-events>

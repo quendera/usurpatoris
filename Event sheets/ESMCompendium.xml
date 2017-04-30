@@ -9,8 +9,16 @@
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="490150094954438" type="SpriteMenuBg" />
+                <action id="-9" name="Destroy" sid="102697325071302" type="SpriteCard" />
+                <action id="-9" name="Destroy" sid="715480076148551" type="SpriteCard2" />
                 <action id="-3" name="Create object" sid="254678432126235" type="System">
                     <param id="0" name="Object to create">SpriteC1</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">0</param>
+                    <param id="3" name="Y">0</param>
+                </action>
+                <action id="-3" name="Create object" sid="413739587887674" type="System">
+                    <param id="0" name="Object to create">SpriteMenuBg</param>
                     <param id="1" name="Layer">0</param>
                     <param id="2" name="X">0</param>
                     <param id="3" name="Y">0</param>
@@ -37,6 +45,9 @@
                     <param id="0" name="Key">&quot;A7&quot;</param>
                 </action>
                 <action id="-25" name="Move to bottom" sid="210627876966863" type="SpriteC1" />
+                <action id="-16" name="Set opacity" sid="975225331622566" type="SpriteMenuBg">
+                    <param id="0" name="Opacity">0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="656817079758887">
@@ -55,7 +66,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="959769429923295" type="SpriteEnemy1">
+                        <action id="4" name="Set animation" sid="959769429923295" type="SpriteEnemy2">
                             <param id="0" name="Animation">&quot;A1&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -69,7 +80,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="509121474661214" type="SpriteEnemy1">
+                        <action id="4" name="Set animation" sid="334548422367543" type="SpriteEnemy2">
                             <param id="0" name="Animation">&quot;A2&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -83,7 +94,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="781320277878534" type="SpriteEnemy1">
+                        <action id="4" name="Set animation" sid="887270429502257" type="SpriteEnemy2">
                             <param id="0" name="Animation">&quot;A3&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -97,7 +108,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="975687143305009" type="SpriteEnemy1">
+                        <action id="4" name="Set animation" sid="924408096556625" type="SpriteEnemy2">
                             <param id="0" name="Animation">&quot;A4&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -144,7 +155,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="503485672112588" type="SpriteEnemy1">
+                        <action id="4" name="Set animation" sid="235887745175905" type="SpriteEnemy2">
                             <param id="0" name="Animation">&quot;A5&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -158,7 +169,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="485796076552687" type="SpriteEnemy1">
+                        <action id="4" name="Set animation" sid="450451597188431" type="SpriteEnemy2">
                             <param id="0" name="Animation">&quot;A6&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -172,7 +183,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="114294929832023" type="SpriteEnemy1">
+                        <action id="4" name="Set animation" sid="784907644618981" type="SpriteEnemy2">
                             <param id="0" name="Animation">&quot;A7&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -186,7 +197,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="621759642459664" type="SpriteEnemy1">
+                        <action id="4" name="Set animation" sid="570296793360920" type="SpriteEnemy2">
                             <param id="0" name="Animation">&quot;A8&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -236,7 +247,7 @@
         </event-block>
         <event-block sid="100007409880200">
             <conditions>
-                <condition id="1" name="Is overlapping another object" sid="831648186208695" type="SpriteEnemy1">
+                <condition id="1" name="Is overlapping another object" sid="831648186208695" type="SpriteEnemy2">
                     <param id="0" name="Object">SpriteC3</param>
                 </condition>
             </conditions>
@@ -245,12 +256,12 @@
                 <event-block sid="429885940267912">
                     <conditions>
                         <condition id="-13" name="Pick nth instance" sid="569902131664329" type="System">
-                            <param id="0" name="Object">SpriteEnemy1</param>
+                            <param id="0" name="Object">SpriteEnemy2</param>
                             <param id="1" name="Instance">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="248614652868247" type="SpriteEnemy1">
+                        <action id="4" name="Set animation" sid="248614652868247" type="SpriteEnemy2">
                             <param id="0" name="Animation">&quot;A9&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -259,12 +270,12 @@
                 <event-block sid="138953936732872">
                     <conditions>
                         <condition id="-13" name="Pick nth instance" sid="497466156116382" type="System">
-                            <param id="0" name="Object">SpriteEnemy1</param>
+                            <param id="0" name="Object">SpriteEnemy2</param>
                             <param id="1" name="Instance">1</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="785707090639483" type="SpriteEnemy1">
+                        <action id="4" name="Set animation" sid="785707090639483" type="SpriteEnemy2">
                             <param id="0" name="Animation">&quot;A10&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -273,12 +284,12 @@
                 <event-block sid="520987665220516">
                     <conditions>
                         <condition id="-13" name="Pick nth instance" sid="284707641683084" type="System">
-                            <param id="0" name="Object">SpriteEnemy1</param>
+                            <param id="0" name="Object">SpriteEnemy2</param>
                             <param id="1" name="Instance">2</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="450213445006447" type="SpriteEnemy1">
+                        <action id="4" name="Set animation" sid="450213445006447" type="SpriteEnemy2">
                             <param id="0" name="Animation">&quot;A11&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -287,12 +298,12 @@
                 <event-block sid="263506247640652">
                     <conditions>
                         <condition id="-13" name="Pick nth instance" sid="956268996977794" type="System">
-                            <param id="0" name="Object">SpriteEnemy1</param>
+                            <param id="0" name="Object">SpriteEnemy2</param>
                             <param id="1" name="Instance">3</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="568271846028691" type="SpriteEnemy1">
+                        <action id="4" name="Set animation" sid="568271846028691" type="SpriteEnemy2">
                             <param id="0" name="Animation">&quot;A12&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -342,7 +353,7 @@
         </event-block>
         <event-block sid="206789160111089">
             <conditions>
-                <condition id="1" name="Is overlapping another object" sid="458904579081225" type="SpriteEnemy1">
+                <condition id="1" name="Is overlapping another object" sid="458904579081225" type="SpriteEnemy2">
                     <param id="0" name="Object">SpriteC4</param>
                 </condition>
             </conditions>
@@ -351,12 +362,12 @@
                 <event-block sid="305795998041244">
                     <conditions>
                         <condition id="-13" name="Pick nth instance" sid="408489423878344" type="System">
-                            <param id="0" name="Object">SpriteEnemy1</param>
+                            <param id="0" name="Object">SpriteEnemy2</param>
                             <param id="1" name="Instance">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="626741775374209" type="SpriteEnemy1">
+                        <action id="4" name="Set animation" sid="626741775374209" type="SpriteEnemy2">
                             <param id="0" name="Animation">&quot;A13&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -365,12 +376,12 @@
                 <event-block sid="317918655218033">
                     <conditions>
                         <condition id="-13" name="Pick nth instance" sid="578801805171730" type="System">
-                            <param id="0" name="Object">SpriteEnemy1</param>
+                            <param id="0" name="Object">SpriteEnemy2</param>
                             <param id="1" name="Instance">1</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-15" name="Set visible" sid="580724679640737" type="SpriteEnemy1">
+                        <action id="-15" name="Set visible" sid="580724679640737" type="SpriteEnemy2">
                             <param id="0" name="Visibility">0</param>
                         </action>
                     </actions>
@@ -378,12 +389,12 @@
                 <event-block sid="492010360071934">
                     <conditions>
                         <condition id="-13" name="Pick nth instance" sid="380078576552294" type="System">
-                            <param id="0" name="Object">SpriteEnemy1</param>
+                            <param id="0" name="Object">SpriteEnemy2</param>
                             <param id="1" name="Instance">2</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-15" name="Set visible" sid="597255966151626" type="SpriteEnemy1">
+                        <action id="-15" name="Set visible" sid="597255966151626" type="SpriteEnemy2">
                             <param id="0" name="Visibility">0</param>
                         </action>
                     </actions>
@@ -391,12 +402,12 @@
                 <event-block sid="615452572682405">
                     <conditions>
                         <condition id="-13" name="Pick nth instance" sid="645792509055642" type="System">
-                            <param id="0" name="Object">SpriteEnemy1</param>
+                            <param id="0" name="Object">SpriteEnemy2</param>
                             <param id="1" name="Instance">3</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-15" name="Set visible" sid="680353223838671" type="SpriteEnemy1">
+                        <action id="-15" name="Set visible" sid="680353223838671" type="SpriteEnemy2">
                             <param id="0" name="Visibility">0</param>
                         </action>
                     </actions>
@@ -477,10 +488,109 @@
         <event-block sid="415537111246653">
             <conditions>
                 <condition id="17" name="On tap object" sid="316510890413106" type="Touch">
-                    <param id="0" name="Object">SpriteEnemy1</param>
+                    <param id="0" name="Object">SpriteEnemy2</param>
                 </condition>
             </conditions>
+            <actions>
+                <action id="-24" name="Move to top" sid="425717872052797" type="SpriteMenuBg" />
+                <action id="-16" name="Set opacity" sid="651398058103119" type="SpriteMenuBg">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+                <action id="-3" name="Create object" sid="124933313313164" type="System">
+                    <param id="0" name="Object to create">SpriteCard</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">0</param>
+                    <param id="3" name="Y">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="442922370895918" type="SpriteCard">
+                    <param id="0" name="Animation">SpriteEnemy2.AnimationName</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="421990690733748">
+            <conditions>
+                <condition id="-3" name="Is on-screen" sid="584126094423855" type="SpriteCard" />
+            </conditions>
             <actions />
+            <sub-events>
+                <event-block sid="743666270688866">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="601643051916020" type="Touch">
+                            <param id="0" name="Object">SpriteGoRead</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="815093676856743" type="System">
+                            <param id="0" name="Object to create">SpriteCard2</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">0</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="273223327310715" type="SpriteCard2">
+                            <param id="0" name="Animation">SpriteEnemy2.AnimationName</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="244342256766661" type="SpriteCard" />
+                    </actions>
+                </event-block>
+                <event-block sid="894609703544429">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="718657758218250" type="Touch">
+                            <param id="0" name="Object">SpriteGoClose</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="811960554313063" type="SpriteCard" />
+                        <action id="-16" name="Set opacity" sid="851872773330479" type="SpriteMenuBg">
+                            <param id="0" name="Opacity">0</param>
+                        </action>
+                        <action id="-25" name="Move to bottom" sid="360724261514130" type="SpriteMenuBg" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="386013443529546">
+            <conditions>
+                <condition id="-3" name="Is on-screen" sid="478123404477376" type="SpriteCard2" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="410675172387838">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="420965663561788" type="Touch">
+                            <param id="0" name="Object">SpriteGoRead</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="104574447095325" type="System">
+                            <param id="0" name="Object to create">SpriteCard</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">0</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="511348243372482" type="SpriteCard">
+                            <param id="0" name="Animation">SpriteEnemy2.AnimationName</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="315926959082396" type="SpriteCard2" />
+                    </actions>
+                </event-block>
+                <event-block sid="627054083016428">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="553607429744839" type="Touch">
+                            <param id="0" name="Object">SpriteGoClose</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="639446111417049" type="SpriteCard2" />
+                        <action id="-16" name="Set opacity" sid="196673250867540" type="SpriteMenuBg">
+                            <param id="0" name="Opacity">0</param>
+                        </action>
+                        <action id="-25" name="Move to bottom" sid="571432523268658" type="SpriteMenuBg" />
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>
