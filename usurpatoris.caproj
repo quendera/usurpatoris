@@ -10,7 +10,9 @@
     <unique-id>2m2oqhlgof90t</unique-id>
     <saved-with-version>24400</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="LocalStorage" version="1">Local storage</plugin>
         <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
@@ -73,42 +75,81 @@
                 </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="867043170234115" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tiago\Desktop\SPACEAPPS\assets\mask.png" />
+                <animation framecount="1" loop="0" name="A1" pingpong="0" repeatcount="1" repeatto="0" sid="867043170234115" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tiago\Desktop\SPACEAPPS\assets\Coins\native-large_0000s_0000_Gull2.png" />
                 </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="SpriteEnemy1" sid="991066787473106">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="494200901719347" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tiago\Desktop\SPACEAPPS\assets\mask.png">
+                <animation framecount="1" loop="0" name="A2" pingpong="0" repeatcount="1" repeatto="0" sid="483995190208352" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tiago\Desktop\SPACEAPPS\assets\Coins\native-large_0000s_0008_Native_Turtle1.png">
                         <collision-poly>
-                            <point x="0.146667" y="0.146667" />
+                            <point x="0.146" y="0.146" />
                             <point x="0.5" y="0" />
-                            <point x="0.853333" y="0.146667" />
+                            <point x="0.854" y="0.146" />
                             <point x="1" y="0.5" />
-                            <point x="0.853333" y="0.853333" />
+                            <point x="0.854" y="0.854" />
                             <point x="0.5" y="1" />
-                            <point x="0.146667" y="0.853333" />
+                            <point x="0.146" y="0.854" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="A3" pingpong="0" repeatcount="1" repeatto="0" sid="671805901737518" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tiago\Desktop\SPACEAPPS\assets\Coins\native-large_0000s_0007_Otter1.png">
+                        <collision-poly>
+                            <point x="0.146" y="0.146" />
+                            <point x="0.5" y="0" />
+                            <point x="0.854" y="0.146" />
+                            <point x="1" y="0.5" />
+                            <point x="0.854" y="0.854" />
+                            <point x="0.5" y="1" />
+                            <point x="0.146" y="0.854" />
                             <point x="0" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="SpriteEnemy2" sid="638984433070930">
+        <object-type name="SpriteEnemy1" sid="991066787473106">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="523168555939355" speed="5">
+                <animation framecount="1" loop="0" name="A1" pingpong="0" repeatcount="1" repeatto="0" sid="494200901719347" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tiago\Desktop\SPACEAPPS\assets\Coins\invaders-large_0000s_0001_crawfish1.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="A2" pingpong="0" repeatcount="1" repeatto="0" sid="210588525566121" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="SpriteEnemy3" sid="298642833726652">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="310296557787336" speed="5">
+                <animation framecount="1" loop="0" name="A3" pingpong="0" repeatcount="1" repeatto="0" sid="155758260550642" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="A4" pingpong="0" repeatcount="1" repeatto="0" sid="937296229585803" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="A5" pingpong="0" repeatcount="1" repeatto="0" sid="864752927164389" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tiago\Desktop\SPACEAPPS\assets\Coins\invaders-large_0000s_0012_Siluro3.png">
+                        <collision-poly>
+                            <point x="0.146" y="0.146" />
+                            <point x="0.5" y="0" />
+                            <point x="0.854" y="0.146" />
+                            <point x="1" y="0.5" />
+                            <point x="0.854" y="0.854" />
+                            <point x="0.5" y="1" />
+                            <point x="0.146" y="0.854" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="A6" pingpong="0" repeatcount="1" repeatto="0" sid="294944633345135" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="A7" pingpong="0" repeatcount="1" repeatto="0" sid="958706069740255" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="A8" pingpong="0" repeatcount="1" repeatto="0" sid="505717874678479" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="A9" pingpong="0" repeatcount="1" repeatto="0" sid="525346876078982" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="A10" pingpong="0" repeatcount="1" repeatto="0" sid="145777147508938" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
@@ -185,13 +226,159 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="SpriteMenuBg" sid="420816942543725">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="372125123915550" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Tiago\Desktop\SPACEAPPS\assets\homescreen2.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SpriteCompendium" sid="680150812026804">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="737306464376650" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SpriteContribute" sid="412628964025062">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="153231049405697" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SpriteAbout" sid="565930916648005">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="780339409351129" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LocalStorage" sid="520309093334195">
+            <plugin id="LocalStorage" />
+        </object-type>
+        <object-type global="1" name="Array" sid="839268497528983">
+            <plugin id="Arr" />
+        </object-type>
+        <object-type name="SpriteC1" sid="229199262054752">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="361096366817938" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Tiago\Desktop\SPACEAPPS\assets\compendium1-MENU.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SpriteC2" sid="919736714866609">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="659667283249288" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Tiago\Desktop\SPACEAPPS\assets\compendium2-MENU.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SpriteC4" sid="115365751502559">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="560731134140734" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Tiago\Desktop\SPACEAPPS\assets\compendium3-MENU.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SpriteC3" sid="122901733003130">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="645889036361103" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Tiago\Desktop\SPACEAPPS\assets\compendium2-MENU.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SpriteGoBack" sid="997263082809950">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="963828835679288" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SpriteGoMore" sid="651727237617424">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="677001078616707" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SpriteGoMenu" sid="336833833843690">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="799712896319156" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SpriteCard" sid="459587810757373">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="370760809808503" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SpriteEnemy2" sid="625728025942947">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="A1" pingpong="0" repeatcount="1" repeatto="0" sid="828666010172246" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tiago\Desktop\SPACEAPPS\assets\Coins\invaders-large_0000s_0001_crawfish1.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="A2" pingpong="0" repeatcount="1" repeatto="0" sid="270837147705026" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="A3" pingpong="0" repeatcount="1" repeatto="0" sid="420016576243956" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="A4" pingpong="0" repeatcount="1" repeatto="0" sid="428836673750671" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="A5" pingpong="0" repeatcount="1" repeatto="0" sid="450639517039648" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tiago\Desktop\SPACEAPPS\assets\Coins\invaders-large_0000s_0012_Siluro3.png">
+                        <collision-poly>
+                            <point x="0.146" y="0.146" />
+                            <point x="0.5" y="0" />
+                            <point x="0.854" y="0.146" />
+                            <point x="1" y="0.5" />
+                            <point x="0.854" y="0.854" />
+                            <point x="0.5" y="1" />
+                            <point x="0.146" y="0.854" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="A6" pingpong="0" repeatcount="1" repeatto="0" sid="707005197333166" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="A7" pingpong="0" repeatcount="1" repeatto="0" sid="899377046792724" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="A8" pingpong="0" repeatcount="1" repeatto="0" sid="394456043548497" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="A9" pingpong="0" repeatcount="1" repeatto="0" sid="669953149948582" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="A10" pingpong="0" repeatcount="1" repeatto="0" sid="510364737344073" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Enemies" plugin-id="Sprite" sid="140817415989364">
             <members>
                 <member>SpriteEnemy1</member>
-                <member>SpriteEnemy2</member>
-                <member>SpriteEnemy3</member>
             </members>
             <instance-variables>
                 <instance-variable name="Size0" sid="311698548061723" type="number" />
@@ -244,6 +431,7 @@
             </properties>
         </global-instance>
         <global-instance type="Function" uid="9" />
+        <global-instance type="LocalStorage" uid="17" />
     </global-instances>
     <sounds-folder />
     <music-folder />

@@ -3,6 +3,18 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>ESMMain</name>
     <events>
+        <event-block sid="835432571524903">
+            <conditions>
+                <condition id="4" name="Is touching object" sid="933756161889004" type="Touch">
+                    <param id="0" name="Object">SpritePlay</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="108257326869385" type="SpritePlay">
+                    <param id="0" name="Opacity">30</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="882115708791377">
             <conditions>
                 <condition id="17" name="On tap object" sid="267041080775817" type="Touch">
@@ -10,8 +22,92 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="-16" name="Set opacity" sid="635790045391976" type="SpritePlay">
+                    <param id="0" name="Opacity">0</param>
+                </action>
                 <action id="-2" name="Go to layout" sid="903023660956742" type="System">
                     <param id="0" name="Layout">Layout 1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="753395561117549">
+            <conditions>
+                <condition id="4" name="Is touching object" sid="842298581334253" type="Touch">
+                    <param id="0" name="Object">SpriteCompendium</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="258557368148677" type="SpriteCompendium">
+                    <param id="0" name="Opacity">30</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="666193114754036">
+            <conditions>
+                <condition id="17" name="On tap object" sid="328142840244734" type="Touch">
+                    <param id="0" name="Object">SpriteCompendium</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="773710476910451" type="SpriteCompendium">
+                    <param id="0" name="Opacity">0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="853186190674479" type="System">
+                    <param id="0" name="Layout">MCompendium</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="952282053566162">
+            <conditions>
+                <condition id="4" name="Is touching object" sid="316843038965647" type="Touch">
+                    <param id="0" name="Object">SpriteContribute</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="195469336602263" type="SpriteContribute">
+                    <param id="0" name="Opacity">30</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="258122531716773">
+            <conditions>
+                <condition id="17" name="On tap object" sid="274126451591902" type="Touch">
+                    <param id="0" name="Object">SpriteContribute</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="248216082515186" type="SpriteContribute">
+                    <param id="0" name="Opacity">0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="282532341945264" type="System">
+                    <param id="0" name="Layout">MContribute</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="615299440575896">
+            <conditions>
+                <condition id="4" name="Is touching object" sid="525355524691044" type="Touch">
+                    <param id="0" name="Object">SpriteAbout</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="626113094196593" type="SpriteAbout">
+                    <param id="0" name="Opacity">30</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="478745273821960">
+            <conditions>
+                <condition id="17" name="On tap object" sid="205881320303186" type="Touch">
+                    <param id="0" name="Object">SpriteAbout</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="154526501416227" type="SpriteAbout">
+                    <param id="0" name="Opacity">0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="458723646970302" type="System">
+                    <param id="0" name="Layout">MAbout</param>
                 </action>
             </actions>
         </event-block>

@@ -2,5 +2,20 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>ESMContribute</name>
-    <events />
+    <events>
+        <event-block sid="544584866490959">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="188040166257350" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="152151475016437" type="SpriteMenuBg" />
+                <action id="-3" name="Create object" sid="375057168414298" type="System">
+                    <param id="0" name="Object to create">SpriteMenuBg</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">0</param>
+                    <param id="3" name="Y">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
 </c2eventsheet>

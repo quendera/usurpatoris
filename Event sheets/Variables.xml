@@ -3,6 +3,12 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Variables</name>
     <events>
+        <variable constant="0" name="loopcounter" sid="271049389755860" static="0" type="number">0</variable>
+        <variable constant="0" name="enemysize" sid="879831745592765" static="0" type="number">0</variable>
+        <variable constant="0" name="enemytravlespeed" sid="860943009413364" static="0" type="number">0</variable>
+        <variable constant="0" name="Killer" sid="425534200744667" static="0" type="text"></variable>
+        <variable constant="0" name="randX" sid="413770962218848" static="0" type="number">0</variable>
+        <variable constant="0" name="randY" sid="271996356315771" static="0" type="number">0</variable>
         <variable constant="0" name="zoom" sid="368812313956215" static="0" type="number">0</variable>
         <variable constant="0" name="windoww" sid="872050502949166" static="0" type="number">0</variable>
         <variable constant="0" name="windowh" sid="757627734512390" static="0" type="number">0</variable>
