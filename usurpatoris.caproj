@@ -112,19 +112,13 @@
         <object-type name="SpriteEnemy1" sid="991066787473106">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="1" loop="0" name="A1" pingpong="0" repeatcount="1" repeatto="0" sid="494200901719347" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tiago\Desktop\SPACEAPPS\assets\Coins\invaders-large_0000s_0001_crawfish1.png" />
-                </animation>
-                <animation framecount="1" loop="0" name="A2" pingpong="0" repeatcount="1" repeatto="0" sid="210588525566121" speed="5">
+                <animation framecount="1" loop="0" name="A1" pingpong="0" repeatcount="1" repeatto="0" sid="958706069740255" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
-                <animation framecount="1" loop="0" name="A3" pingpong="0" repeatcount="1" repeatto="0" sid="155758260550642" speed="5">
+                <animation framecount="1" loop="0" name="A2" pingpong="0" repeatcount="1" repeatto="0" sid="525346876078982" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
-                <animation framecount="1" loop="0" name="A4" pingpong="0" repeatcount="1" repeatto="0" sid="937296229585803" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-                <animation framecount="1" loop="0" name="A5" pingpong="0" repeatcount="1" repeatto="0" sid="864752927164389" speed="5">
+                <animation framecount="1" loop="0" name="A3" pingpong="0" repeatcount="1" repeatto="0" sid="864752927164389" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tiago\Desktop\SPACEAPPS\assets\Coins\invaders-large_0000s_0012_Siluro3.png">
                         <collision-poly>
                             <point x="0.146" y="0.146" />
@@ -138,19 +132,25 @@
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="1" loop="0" name="A6" pingpong="0" repeatcount="1" repeatto="0" sid="294944633345135" speed="5">
+                <animation framecount="1" loop="0" name="A4" pingpong="0" repeatcount="1" repeatto="0" sid="210588525566121" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
-                <animation framecount="1" loop="0" name="A7" pingpong="0" repeatcount="1" repeatto="0" sid="958706069740255" speed="5">
+                <animation framecount="1" loop="0" name="A5" pingpong="0" repeatcount="1" repeatto="0" sid="937296229585803" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
-                <animation framecount="1" loop="0" name="A8" pingpong="0" repeatcount="1" repeatto="0" sid="505717874678479" speed="5">
+                <animation framecount="1" loop="0" name="A6" pingpong="0" repeatcount="1" repeatto="0" sid="155758260550642" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
-                <animation framecount="1" loop="0" name="A9" pingpong="0" repeatcount="1" repeatto="0" sid="525346876078982" speed="5">
+                <animation framecount="1" loop="0" name="A7" pingpong="0" repeatcount="1" repeatto="0" sid="494200901719347" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tiago\Desktop\SPACEAPPS\assets\Coins\invaders-large_0000s_0001_crawfish1.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="A8" pingpong="0" repeatcount="1" repeatto="0" sid="294944633345135" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
-                <animation framecount="1" loop="0" name="A10" pingpong="0" repeatcount="1" repeatto="0" sid="145777147508938" speed="5">
+                <animation framecount="1" loop="0" name="A9" pingpong="0" repeatcount="1" repeatto="0" sid="145777147508938" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="A10" pingpong="0" repeatcount="1" repeatto="0" sid="505717874678479" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
@@ -251,7 +251,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="SpriteAbout" sid="565930916648005">
+        <object-type name="SpriteGoAbout" sid="565930916648005">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="780339409351129" speed="5">
@@ -439,7 +439,17 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="A1" pingpong="0" repeatcount="1" repeatto="0" sid="731066128493174" speed="5">
-                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Tiago\Desktop\SPACEAPPS\assets\ALL\NSA2017\FINALFINALCARDS\FINALFINALCARDS\moremoreinfoFINAL2-02.png" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Tiago\Desktop\SPACEAPPS\assets\ALL\NSA2017\FINALFINALCARDS\FINALFINALCARDS\moremoreinfoFINAL2-01.png">
+                        <collision-poly>
+                            <point x="0.135" y="0.084375" />
+                            <point x="0.5" y="0.08125" />
+                            <point x="0.91625" y="0.0523437" />
+                            <point x="0.93" y="0.5" />
+                            <point x="0.8475" y="0.904688" />
+                            <point x="0.11875" y="0.925781" />
+                            <point x="0.0675" y="0.5" />
+                        </collision-poly>
+                    </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="A2" pingpong="0" repeatcount="1" repeatto="0" sid="828736455577938" speed="5">
                     <frame duration="1" hotspotX="0" hotspotY="0" />
@@ -503,6 +513,28 @@
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="903612247736678" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tiago\Desktop\SPACEAPPS\assets\ALL\NSA2017\18209846_10211952322697325_885863843_o.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SpriteAbout" sid="486668277711666">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="186691449327451">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="826401531703464" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Tiago\Desktop\SPACEAPPS\assets\about-MENU.png">
+                        <collision-poly>
+                            <point x="0.06" y="0.0375" />
+                            <point x="0.5" y="0" />
+                            <point x="0.95625" y="0.0273438" />
+                            <point x="0.95625" y="0.972656" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0575" y="0.964063" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>

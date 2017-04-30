@@ -87,11 +87,11 @@
         <event-block sid="615299440575896">
             <conditions>
                 <condition id="4" name="Is touching object" sid="525355524691044" type="Touch">
-                    <param id="0" name="Object">SpriteAbout</param>
+                    <param id="0" name="Object">SpriteGoAbout</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-16" name="Set opacity" sid="626113094196593" type="SpriteAbout">
+                <action id="-16" name="Set opacity" sid="626113094196593" type="SpriteGoAbout">
                     <param id="0" name="Opacity">30</param>
                 </action>
             </actions>
@@ -99,11 +99,11 @@
         <event-block sid="478745273821960">
             <conditions>
                 <condition id="17" name="On tap object" sid="205881320303186" type="Touch">
-                    <param id="0" name="Object">SpriteAbout</param>
+                    <param id="0" name="Object">SpriteGoAbout</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-16" name="Set opacity" sid="154526501416227" type="SpriteAbout">
+                <action id="-16" name="Set opacity" sid="154526501416227" type="SpriteGoAbout">
                     <param id="0" name="Opacity">0</param>
                 </action>
                 <action id="-2" name="Go to layout" sid="458723646970302" type="System">

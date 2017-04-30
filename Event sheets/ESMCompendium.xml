@@ -139,7 +139,7 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="581275109167098">
+        <event-block disabled="1" sid="581275109167098">
             <conditions>
                 <condition id="1" name="Is overlapping another object" sid="127103973571191" type="SpriteEnemy2">
                     <param id="0" name="Object">SpriteC2</param>
@@ -147,7 +147,7 @@
             </conditions>
             <actions />
             <sub-events>
-                <event-block sid="394457497896532">
+                <event-block disabled="1" sid="394457497896532">
                     <conditions>
                         <condition id="-13" name="Pick nth instance" sid="895527037907810" type="System">
                             <param id="0" name="Object">SpriteEnemy2</param>
@@ -161,7 +161,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="484086893482480">
+                <event-block disabled="1" sid="484086893482480">
                     <conditions>
                         <condition id="-13" name="Pick nth instance" sid="475327679365852" type="System">
                             <param id="0" name="Object">SpriteEnemy2</param>
@@ -175,7 +175,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="735348048913927">
+                <event-block disabled="1" sid="735348048913927">
                     <conditions>
                         <condition id="-13" name="Pick nth instance" sid="147360655849264" type="System">
                             <param id="0" name="Object">SpriteEnemy2</param>
@@ -189,7 +189,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="544101863018553">
+                <event-block disabled="1" sid="544101863018553">
                     <conditions>
                         <condition id="-13" name="Pick nth instance" sid="757287141132772" type="System">
                             <param id="0" name="Object">SpriteEnemy2</param>
@@ -203,7 +203,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="129687470571528">
+                <event-block disabled="1" sid="129687470571528">
                     <conditions>
                         <condition id="17" name="On tap object" sid="312288745325253" type="Touch">
                             <param id="0" name="Object">SpriteGoMore</param>
@@ -223,7 +223,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="643933430622337">
+                <event-block disabled="1" sid="643933430622337">
                     <conditions>
                         <condition id="17" name="On tap object" sid="729695053555521" type="Touch">
                             <param id="0" name="Object">SpriteGoBack</param>
@@ -245,7 +245,7 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="100007409880200">
+        <event-block disabled="1" sid="100007409880200">
             <conditions>
                 <condition id="1" name="Is overlapping another object" sid="831648186208695" type="SpriteEnemy2">
                     <param id="0" name="Object">SpriteC3</param>
@@ -253,7 +253,7 @@
             </conditions>
             <actions />
             <sub-events>
-                <event-block sid="429885940267912">
+                <event-block disabled="1" sid="429885940267912">
                     <conditions>
                         <condition id="-13" name="Pick nth instance" sid="569902131664329" type="System">
                             <param id="0" name="Object">SpriteEnemy2</param>
@@ -267,7 +267,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="138953936732872">
+                <event-block disabled="1" sid="138953936732872">
                     <conditions>
                         <condition id="-13" name="Pick nth instance" sid="497466156116382" type="System">
                             <param id="0" name="Object">SpriteEnemy2</param>
@@ -281,7 +281,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="520987665220516">
+                <event-block disabled="1" sid="520987665220516">
                     <conditions>
                         <condition id="-13" name="Pick nth instance" sid="284707641683084" type="System">
                             <param id="0" name="Object">SpriteEnemy2</param>
@@ -295,7 +295,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="263506247640652">
+                <event-block disabled="1" sid="263506247640652">
                     <conditions>
                         <condition id="-13" name="Pick nth instance" sid="956268996977794" type="System">
                             <param id="0" name="Object">SpriteEnemy2</param>
@@ -309,7 +309,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="653818982033852">
+                <event-block disabled="1" sid="653818982033852">
                     <conditions>
                         <condition id="17" name="On tap object" sid="801110698471780" type="Touch">
                             <param id="0" name="Object">SpriteGoMore</param>
@@ -329,7 +329,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="378594817780742">
+                <event-block disabled="1" sid="378594817780742">
                     <conditions>
                         <condition id="17" name="On tap object" sid="453942315788018" type="Touch">
                             <param id="0" name="Object">SpriteGoBack</param>
@@ -351,7 +351,7 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="206789160111089">
+        <event-block disabled="1" sid="206789160111089">
             <conditions>
                 <condition id="1" name="Is overlapping another object" sid="458904579081225" type="SpriteEnemy2">
                     <param id="0" name="Object">SpriteC4</param>
@@ -359,7 +359,7 @@
             </conditions>
             <actions />
             <sub-events>
-                <event-block sid="305795998041244">
+                <event-block disabled="1" sid="305795998041244">
                     <conditions>
                         <condition id="-13" name="Pick nth instance" sid="408489423878344" type="System">
                             <param id="0" name="Object">SpriteEnemy2</param>
@@ -373,7 +373,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="317918655218033">
+                <event-block disabled="1" sid="317918655218033">
                     <conditions>
                         <condition id="-13" name="Pick nth instance" sid="578801805171730" type="System">
                             <param id="0" name="Object">SpriteEnemy2</param>
@@ -386,7 +386,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="492010360071934">
+                <event-block disabled="1" sid="492010360071934">
                     <conditions>
                         <condition id="-13" name="Pick nth instance" sid="380078576552294" type="System">
                             <param id="0" name="Object">SpriteEnemy2</param>
@@ -399,7 +399,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="615452572682405">
+                <event-block disabled="1" sid="615452572682405">
                     <conditions>
                         <condition id="-13" name="Pick nth instance" sid="645792509055642" type="System">
                             <param id="0" name="Object">SpriteEnemy2</param>
@@ -412,7 +412,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="688131028770142">
+                <event-block disabled="1" sid="688131028770142">
                     <conditions>
                         <condition id="17" name="On tap object" sid="140045921512289" type="Touch">
                             <param id="0" name="Object">SpriteGoBack</param>
@@ -528,10 +528,14 @@
                             <param id="3" name="Y">0</param>
                         </action>
                         <action id="4" name="Set animation" sid="273223327310715" type="SpriteCard2">
-                            <param id="0" name="Animation">SpriteEnemy2.AnimationName</param>
+                            <param id="0" name="Animation">SpriteCard.AnimationName</param>
                             <param id="1" name="From">1</param>
                         </action>
+                        <action id="-24" name="Move to top" sid="255399430539736" type="SpriteCard2" />
                         <action id="-9" name="Destroy" sid="244342256766661" type="SpriteCard" />
+                        <action id="-16" name="Wait" sid="137665240382381" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="894609703544429">
@@ -556,26 +560,6 @@
             </conditions>
             <actions />
             <sub-events>
-                <event-block sid="410675172387838">
-                    <conditions>
-                        <condition id="17" name="On tap object" sid="420965663561788" type="Touch">
-                            <param id="0" name="Object">SpriteGoRead</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-3" name="Create object" sid="104574447095325" type="System">
-                            <param id="0" name="Object to create">SpriteCard</param>
-                            <param id="1" name="Layer">0</param>
-                            <param id="2" name="X">0</param>
-                            <param id="3" name="Y">0</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="511348243372482" type="SpriteCard">
-                            <param id="0" name="Animation">SpriteEnemy2.AnimationName</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-9" name="Destroy" sid="315926959082396" type="SpriteCard2" />
-                    </actions>
-                </event-block>
                 <event-block sid="627054083016428">
                     <conditions>
                         <condition id="17" name="On tap object" sid="553607429744839" type="Touch">

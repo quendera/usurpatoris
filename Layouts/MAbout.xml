@@ -29,13 +29,20 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="SpriteMenuBg" uid="4">
+                <instance type="SpriteAbout" uid="44">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
+                        <collisions>Disabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -100,9 +107,58 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="Text" uid="43">
+                    <properties>
+                        <text>Developed by Carolina Pereira, Juan Castineiras, Mafalda Valente, Tiago Quendera</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Verdana,-37,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>27</x>
+                        <y>645</y>
+                        <z>0</z>
+                        <width>764</width>
+                        <height>164</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="SpriteGoMenu" uid="4">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>400</x>
+                        <y>1147</y>
+                        <z>0</z>
+                        <width>592</width>
+                        <height>122</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0</opacity>
+                    </world>
+                </instance>
                 <instance type="Text" uid="41">
                     <properties>
-                        <text>https://github.com/quendera/usurpatoris/</text>
+                        <text></text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Verdana,-37,400,1</font>
                         <color>0,0,204</color>
@@ -127,9 +183,9 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text" uid="42">
+                <instance type="Text" uid="45">
                     <properties>
-                        <text>Full atribution credits and open-source code at:</text>
+                        <text>https://github.com/quendera/usurpatoris/</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Verdana,-37,400,0</font>
                         <color>0,0,0</color>
@@ -142,38 +198,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>11</x>
-                        <y>859</y>
+                        <x>1</x>
+                        <y>857</y>
                         <z>0</z>
-                        <width>780</width>
+                        <width>807</width>
                         <height>102</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Text" uid="43">
-                    <properties>
-                        <text>Developed by Carolina Pereira, Juan Castineiras, Mafalda Valente, Tiago Quendera</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Verdana,-37,400,0</font>
-                        <color>0,0,0</color>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>27</x>
-                        <y>645</y>
-                        <z>0</z>
-                        <width>764</width>
-                        <height>164</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>

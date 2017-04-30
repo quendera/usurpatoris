@@ -117,7 +117,7 @@
                         <opacity>0</opacity>
                     </world>
                 </instance>
-                <instance type="SpriteAbout" uid="16">
+                <instance type="SpriteGoAbout" uid="16">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>

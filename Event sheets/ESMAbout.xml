@@ -3,17 +3,15 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>ESMAbout</name>
     <events>
-        <event-block sid="940532838315328">
+        <event-block sid="487852584160760">
             <conditions>
-                <condition id="-2" name="On start of layout" sid="749639871905695" type="System" />
+                <condition id="17" name="On tap object" sid="759344653540767" type="Touch">
+                    <param id="0" name="Object">SpriteGoMenu</param>
+                </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Destroy" sid="184248241141896" type="SpriteMenuBg" />
-                <action id="-3" name="Create object" sid="704776998221500" type="System">
-                    <param id="0" name="Object to create">SpriteMenuBg</param>
-                    <param id="1" name="Layer">0</param>
-                    <param id="2" name="X">0</param>
-                    <param id="3" name="Y">0</param>
+                <action id="-2" name="Go to layout" sid="279330875117811" type="System">
+                    <param id="0" name="Layout">MMain</param>
                 </action>
             </actions>
         </event-block>
